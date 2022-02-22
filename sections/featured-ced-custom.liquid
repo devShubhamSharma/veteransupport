@@ -1,0 +1,70 @@
+    <section class="position-r gallery">
+      <h2 class="heading-brand">{{section.settings.multi-te-1}}</h2>
+        <div class="hero-slider-2">       
+      {%- for block in section.blocks -%}  
+        {% assign dimage = block.settings.image %}
+        {% assign link = block.settings.link %}
+        {% assign text = block.settings.text %}
+          
+          {%if dimage != blank%}
+            <div class="logo-brand">
+              {%if link!= blank %} <a href="{{link}}">{%endif%}
+                 <img src="{{ dimage | img_url:"large" }}" alt="{{dimage.alt}}" loading="lazy">
+              {%if link!= blank %} </a>{%endif%}   
+            </div>
+          {%endif%}
+        {%endfor%}
+        </div>
+    </section>
+{% schema %}
+{
+    "name": "FEATURED-CED-CUSTOM",
+ "settings": [
+     {
+        "type": "text",
+        "id": "multi-te-1",
+        "label": "Image text"
+      }
+    ],
+  "blocks": [
+    {
+      "type": "Brand",
+      "name": "Brands",
+      "settings": [
+       {
+       
+         "type": "text",
+        "id": "text",
+        "label": "Image text"
+      },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FEATURED-CED-CUSTOM",
+      "blocks": [
+        {
+          "type": "Brand"
+        },
+        {
+          "type": "Brand"
+        },
+        {
+          "type": "Brand"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
