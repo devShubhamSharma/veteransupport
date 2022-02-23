@@ -319,4 +319,10 @@ h2 {
 .w-50 {
     width: 100% !important;
 }
+.collection-width {
+    max-width: unset !important;
+}
+h2 {
+    font-size: 32px;
+}
 }

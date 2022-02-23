@@ -213,7 +213,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
   {% render 'wishlisthero-styles.liquid' %}
-    
+    {{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag }}
+    {{ 'quickview.scss.css' | asset_url | stylesheet_tag }}   
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+     
   </head>
 
   <body class="gradient">
@@ -268,5 +272,12 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
      {{ 'custom-2.js' | asset_url | script_tag }}
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer="defer"></script>
+    <script src="{{ 'quickview.js' | asset_url }}" defer="defer"></script>
+    
+<script>
+    {% capture content %}{% render 'quickview' %}{% endcapture %}
+    var content = {{ content | json }};
+    </script>
   </body>
 </html>
