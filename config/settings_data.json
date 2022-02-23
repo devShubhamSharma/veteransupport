@@ -44,6 +44,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
@@ -58,34 +65,19 @@
               "menu": "footer"
             }
           },
-          "da4c475b-d02c-484a-aef9-5e474efa7ec3": {
+          "f22712d4-d239-4aa8-a871-4de572edd0cf": {
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
               "menu": "footer"
-            }
-          },
-          "a89dd35a-3f03-4a38-9019-d6fa86408d24": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
-            }
-          },
-          "footer-1": {
-            "type": "text",
-            "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
             }
           }
         },
         "block_order": [
+          "footer-1",
           "footer-0",
           "aa561bc8-5ba4-44a3-ae2c-7fc39efca1ce",
-          "da4c475b-d02c-484a-aef9-5e474efa7ec3",
-          "a89dd35a-3f03-4a38-9019-d6fa86408d24",
-          "footer-1"
+          "f22712d4-d239-4aa8-a871-4de572edd0cf"
         ],
         "settings": {
           "color_scheme": "background-1",

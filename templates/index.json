@@ -105,7 +105,7 @@
       ],
       "settings": {
         "title": "Collections",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "color_scheme": "background-1",
         "swipe_on_mobile": false,
         "show_view_all": false,
@@ -150,8 +150,8 @@
         "16450208164a681be1-2": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
+            "button_label_1": "GET IN TOUCH",
+            "button_link_1": "https:\/\/Facebook.com\/VeteranSupport",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",

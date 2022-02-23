@@ -189,7 +189,7 @@ span.content-img {
 /*----------- COLLAGE SECTION CSS END----------  */
 /* FEATURED COLLECETION CSS START  */
 .collection .card-wrapper {
-   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -224,11 +224,7 @@ span.content-img {
     background-color: #196957;
     
 }
-.product-form__buttons {
-    padding: 10px 14px;
-    transition: 0.3s all linear;
-    
-}
+
 .center a.button:hover {
     color: #fff;
 }
@@ -236,12 +232,21 @@ span.content-img {
     background: transparent;
     color: #000000;
 }
-.card-wrapper:hover .product-form__buttons {
+.product-form__buttons::before, .quick-view-div::before  {
+    content: '';
     background: #196957;
-    padding: 10px;
-    transition: .4s all linear;
-    border-radius: 50%;
-    fill: #fff;
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    transition: 0.4s all linear;
+    bottom: -11px;
+    border-radius: 10px;
+    height: 50px;
+    right: -9px;
+    opacity:0;
+}
+.card-wrapper:hover .product-form__buttons::before ,.card-wrapper:hover .quick-view-div::before  {
+    opacity: 1;
 }
 .product-form__buttons button.product-form__submit {
     background: transparent;
@@ -304,10 +309,51 @@ h2 {
     padding: 10rem 0rem !important;
     margin: 5rem auto;
 }
+
+/*------------- QUICK VIEW CSS START---------------  */
+
+
+span.click.quick-view.custom-quickview-icon {
+    position: absolute;
+    right: 8px;
+    bottom: -1px;
+}
+.card-wrapper:hover svg {
+    fill: #fff;
+}
+.badge {
+    background-color: #000;
+    border-color: #000;
+   
+}
+.header__icon:hover {
+    transform: scale(1.1);
+}
+span.wishlist-hero-items-count.wishlist-hero-items-count-text-plain.cart-count-bubble {
+    text-align: right;
+    padding: 5px;
+}
+/*------------- QUICK VIEW CSS END---------------  */
+/*------------ NEWLETTER CSS START----------------  */
+.center.contact-news {
+    position: relative;
+    z-index: 2;
+}
+/*------------ NEWLETTER CSS START----------------  */
+/*----------- FOOTER CSS START-------------------  */
+.grid--3-col-tablet .grid__item {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 2 / 3)!important;
+}
+/*---------- FOOTER CSS END--------------------- */
 /* -----------COLLECTOION SECTION END----------------- */
 
 @media screen and (max-width: 767px){
-
+.logo-brand img {
+    margin: 0 auto;
+}
+.grid--3-col-tablet .grid__item {
+     width: calc(100% - var(--grid-desktop-horizontal-spacing) * 2 / 3)!important;
+}
 }
 @media screen and (max-width: 540px) {
   .left-block {
@@ -323,6 +369,6 @@ h2 {
     max-width: unset !important;
 }
 h2 {
-    font-size: 32px;
+    font-size: 30px;
 }
 }
