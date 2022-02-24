@@ -345,6 +345,10 @@ span.wishlist-hero-items-count.wishlist-hero-items-count-text-plain.cart-count-b
     width: calc(25% - var(--grid-desktop-horizontal-spacing) * 2 / 3)!important;
 }
 /*---------- FOOTER CSS END--------------------- */
+a.view-product {
+    text-align: center;
+    text-decoration: none;
+}
 /* -----------COLLECTOION SECTION END----------------- */
 
 @media screen and (max-width: 767px){

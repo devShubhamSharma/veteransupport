@@ -28,7 +28,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper underline-links-hover hello">
+  <div class="card-wrapper underline-links-hover">
   
   
   {% render 'wishlisthero-collection-product' with product: card_product %}
@@ -84,11 +84,10 @@
           </div>
         {%- endif -%}
         <div class="card__content">
+              <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
           <div class="card__information">
             <h3 class="card__heading">
-              <a href="{{ card_product.url | default: '#' }}" class="full-unstyled-link">
                 {{ card_product.title | escape }}
-              </a>
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
@@ -98,6 +97,7 @@
               <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
             {%- endif -%}
           </div>
+              </a>
         </div>
       </div>
       <div class="card__content position-r">
